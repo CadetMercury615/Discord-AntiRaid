@@ -21,8 +21,7 @@ export class ImplementAntiRaid {
         .addField("**Time of Lockdown**","```" + x + "```")
         await message.channel.send(embed)
         var sGuild = message.guild.id
-        var myChannel = "662882529975730190"
-        client.users.fetch("522895569039917066").then((user) => {
+        client.users.fetch(message.guild.owner.id).then((user) => {
             user.send("There is a raid on server " + sGuild)
         })
     }

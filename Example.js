@@ -18,7 +18,14 @@ client.on('ready', async() => {
 })
 
 client.on('message', async(message) => {
-    //Put your command handler here
+    	if(message.content === '-undo') {
+		if(message.author.id !== "YourOwnerId") return
+		var channels = message.guild.channels.cache.array()
+        channels.forEach( channel => {
+            channel.updateOverwrite(message.guild.id , {
+                SEND_MESSAGES: null
+            });
+		});
     ChannelHandler.handleMessage(message)
     SingleMessageHandler.handleMessage(message)
     MessageLengthHandler.handleMessage(message)

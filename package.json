@@ -1,0 +1,27 @@
+{
+  "name": "discord-antiraid",
+  "version": "1.0.0",
+  "description": "A simple Discord-Antiraid to protect your server from self bots and raids",
+  "main": "Main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/Bot.js",
+    "startTest": "node lib/src/Intelligence/Neuron.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CadetMercury615/Discord-AntiRaid.git"
+  },
+  "author": "CadetMercury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CadetMercury615/Discord-AntiRaid/issues"
+  },
+  "homepage": "https://github.com/CadetMercury615/Discord-AntiRaid#readme",
+  "dependencies": {
+    "@types/ws": "^7.2.4",
+    "brain.js": "^2.0.0-alpha.12",
+    "discord.js": "^12.2.0",
+    "ts-node": "^8.10.1"
+  }
+}
